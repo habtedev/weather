@@ -2,6 +2,7 @@
 
 A modern, responsive weather application built with React + Vite. Features real-time weather data, an intuitive UI, and a seamless user experience.
 
+🚀 Live Demo: https://weather-olive-two-20.vercel.app/
 ---
 
 ✨ Features
