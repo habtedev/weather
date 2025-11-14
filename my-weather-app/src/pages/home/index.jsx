@@ -2,24 +2,25 @@ import { useState, useEffect } from "react";
 import SearchInput from "../../components/SearchInput";
 import WeatherDisplay from "../../components/WeatherDisplay";
 
-// Home page: manages top-level weather state and coordinates fetching.
-// - Keeps a default city, handles loading/error states, and passes
-//   fetched data down to presentational components.
+//Load API Key 
 const apiKey = import.meta.env.VITE_API_KEY;
 
+
 export default function Home() {
+
   // UI state: selected city, fetched weather, and control flags
   const [city, setCity] = useState("London");
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  // Fetch current weather for a given city using OpenWeatherMap.
-  // Expects VITE_API_KEY to be set in the environment (.env).
+ // Featch Weather Data from Api
   const fetchWeather = async (cityName) => {
     setLoading(true);
     setError(null);
     try {
+       
+      // fetch weather data from openweather api
       const res = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`
       );
