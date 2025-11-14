@@ -118,3 +118,67 @@
   animation: spin 1s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg) } }
+
+/* Responsive tweaks - keep the UI readable on small screens */
+@media (max-width: 900px) {
+  .weather-card {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .temp-block .temp {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .weather-card {
+    width: calc(100% - 2rem);
+    margin: 0.8rem auto;
+    padding: 0.9rem;
+  }
+
+  /* Stack the search controls vertically on narrow screens */
+  .search {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+
+  .search-input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .top {
+    gap: 0.6rem;
+  }
+
+  .weather-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .meta {
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .temp-block .temp {
+    font-size: 1.6rem;
+  }
+
+  .weather-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  #root { padding: 1rem }
+}
