@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+  <defs>
+    <linearGradient id="b" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7ed" />
+      <stop offset="1" stop-color="#fff" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#b)" />
+  <text x="60" y="90" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#0b1220">Responsive View (Mobile)</text>
+  <rect x="60" y="120" width="260" height="420" rx="16" fill="#ffffff" stroke="#ffe8c2" />
+  <text x="140" y="240" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#0b1220">Weather Card</text>
+  <text x="140" y="270" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#475569">Compact layout for small screens</text>
+</svg>
